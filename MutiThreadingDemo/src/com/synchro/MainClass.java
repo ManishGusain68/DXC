@@ -10,6 +10,8 @@ public class MainClass {
 		Thread2 t2=new Thread2(m);
 		t1.setName("Thread one");
 		t2.setName("Thread two");
+		//testing
+		
 		
 		t1.start();
 		t1.join();
