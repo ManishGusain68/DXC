@@ -13,11 +13,13 @@ public class ArrayListDemo {
 		list1.add(16);
 		list1.add(21);
 		
-		System.out.println(list1);
 		
-		list1.remove(2);
 		
 		System.out.println(list1);
+		
+		for(int m:list1){
+			System.out.println(m+20);
+		}
 
 	}
 
