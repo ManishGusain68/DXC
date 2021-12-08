@@ -11,6 +11,7 @@ public class MainClass {
 		t1.setName("Thread one");
 		t2.setName("Thread two");
 		//testing   
+		//CHECK
 		
 		
 		t1.start();
