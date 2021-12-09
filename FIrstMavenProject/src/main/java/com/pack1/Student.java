@@ -4,7 +4,15 @@ public class Student {
 
 	private int id;
 	private String name;
-	private Address addr;   //has-a relationahip
+	private Address addr; // has-a relationahip
+
+	public Student(int id, String name, Address addr) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.addr = addr;
+		System.out.println("cons of Student");
+	}
 
 	public Address getAddr() {
 		return addr;
@@ -50,8 +58,8 @@ public class Student {
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", addr=" + addr + "]";
 	}
-	
-	public void sayHello(){
+
+	public void sayHello() {
 		System.out.println("hello from student");
 	}
 

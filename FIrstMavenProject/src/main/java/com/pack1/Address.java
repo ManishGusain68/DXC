@@ -5,6 +5,13 @@ public class Address {
 	private int pincode;
 	private String city;
 
+	public Address(int pincode, String city) {
+		super();
+		this.pincode = pincode;
+		this.city = city;
+		System.out.println("cons of address");
+	}
+
 	public Address() {
 		super();
 		System.out.println("address object created");
@@ -30,8 +37,8 @@ public class Address {
 	public String toString() {
 		return "Address [pincode=" + pincode + ", city=" + city + "]";
 	}
-	
-	public void sayHi(){
+
+	public void sayHi() {
 		System.out.println("Hi from Address class");
 	}
 
