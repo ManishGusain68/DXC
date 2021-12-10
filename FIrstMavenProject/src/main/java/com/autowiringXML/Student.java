@@ -10,6 +10,13 @@ public class Student {
 		super();
 	}
 
+	public Student(Address addr) {
+		super();
+
+		this.addr = addr;
+		System.out.println("Student param cons");
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -24,14 +31,6 @@ public class Student {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Address getAddr() {
-		return addr;
-	}
-
-	public void setAddr(Address addr) {
-		this.addr = addr;
 	}
 
 	

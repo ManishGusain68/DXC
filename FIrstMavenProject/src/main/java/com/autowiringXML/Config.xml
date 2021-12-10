@@ -8,14 +8,17 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-	<bean class="com.autowiringXML.Address" name="addrree">
-		<property name="pincode" value="119900" />
-		<property name="name" value="agra"/>
-	</bean>
+
 	<!-- bean definitions here -->
-	<bean class="com.autowiringXML.Student" name="std1" autowire="byName">
-		<property name="id" value="112" />
-		<property name="name" value="Manish"/>
+	<bean class="com.autowiringXML.Student" name="std1" autowire="constructor">
+		<property name="id" value="121" />
+		<property name="name" value="Manish" />
+	</bean>
+
+	<bean class="com.autowiringXML.Address" name="addr">
+		<property name="pincode" value="119900" />
+		<property name="name" value="agra" />
+		
 	</bean>
 
 
