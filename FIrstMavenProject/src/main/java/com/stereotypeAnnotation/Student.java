@@ -3,11 +3,13 @@ package com.stereotypeAnnotation;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("obj")
+@Scope("prototype")
 public class Student {
-	@Value("12")
+	@Value("#{8>90?78:112}")
 	private int id;
 	@Value("Manish")
 	private String name;
