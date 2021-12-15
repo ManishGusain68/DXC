@@ -10,22 +10,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import springmvc.Model.User;
 
 @Controller
 public class HomeController {
 	// handler methods
+	@ModelAttribute
+	public void commonDataForModel(Model model){
+		model.addAttribute("Desc","Learn with Manish");	
+	}
+	
 	@RequestMapping("/home")
-	public String home() {
+	public RedirectView home() {
+		
+		RedirectView rv=new RedirectView();
+		rv.setUrl("hello");
 
-		return "home";
+		return rv;
 	}
 
 	@RequestMapping("/hello")
 	public String hello(Model model) {
 		// Sending data from controller to jsp
 		model.addAttribute("First", "Manish Gusain");
+		
 
 		return "hello";
 	}
@@ -35,17 +45,19 @@ public class HomeController {
 
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("First", "Samar");
+		
 
 		LocalDateTime ld = LocalDateTime.now();
 		mv.addObject("currentTime", ld);
 		mv.setViewName("hello");
+		
 		return mv;
 
 	}
 
 	@RequestMapping("/contact")
-	public String contact() {
-
+	public String contact(Model mv) {
+		
 		return "contact";
 	}
 
