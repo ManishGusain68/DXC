@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -17,7 +18,7 @@ public class Question {
 	@Column(name="Question_id")
 	private int questionId;
 	private String question;
-	@OneToMany(mappedBy="question")
+	@OneToMany(mappedBy="question",fetch=FetchType.EAGER)
 	private List<Answer> answer;
 	public Question() {
 		super();
@@ -50,7 +51,7 @@ public class Question {
 	}
 	@Override
 	public String toString() {
-		return "Question [questionId=" + questionId + ", question=" + question + ", answer=" + answer + "]";
+		return "Question [questionId=" + questionId + ", question=" + question + "]";
 	}
 	
 	

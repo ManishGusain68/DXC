@@ -31,29 +31,30 @@ public class MainClass {
 //		a1.setQuestion(q1);
 //		a2.setQuestion(q1);
 //		a3.setQuestion(q1);
-
+//
 //		List<Answer> list = new ArrayList<>();
 //		list.add(a1);
 //		list.add(a2);
 //		list.add(a3);
 //
 //		q1.setAnswer(list);
-//		
+//
 //		session.save(a1);
 //		session.save(a2);
 //		session.save(a3);
 //		session.save(q1);
-
+//
 //		Transaction tx = session.beginTransaction();
 //		tx.commit();
+
+		Question ques = session.get(Question.class, 112);
+		System.out.println(ques);
 		
-		Question ques=session.get(Question.class,112);
-		//System.out.println(ques);
-		
-		for(Answer a: ques.getAnswer()){
-			System.out.println(a.getAnswer());
-		}
-		
+//
+//		for (Answer a : ques.getAnswer()) {
+//			System.out.println(a.getAnswer());
+//		}
+
 		session.close();
 		sessionFactory.close();
 

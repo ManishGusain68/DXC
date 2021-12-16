@@ -12,11 +12,12 @@
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
-		<mapping class="com.tuto.Student"/>
-		<mapping class="com.EmbedDemo.Employee"/>
-		<mapping class="com.mapping.Question"/>
-		<mapping class="com.mapping.Answer"/>
-		
+		<property name="format_sql">true</property>
+		<mapping class="com.mapping.Question" />
+		<mapping class="com.mapping.Answer" />
+		<mapping class="com.stateObject.Trainer"/>
+
+
 
 	</session-factory>
 
