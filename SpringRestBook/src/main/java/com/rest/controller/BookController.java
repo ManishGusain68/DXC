@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.rest.entity.Book;
+
 import com.rest.service.BookService;
 
 @RestController
@@ -22,8 +23,11 @@ public class BookController {
 	// @RequestMapping(value="/book/id",method=RequestMethod.GET)
 	@GetMapping("/book/{id}")
 	public Book getBooks(@PathVariable("id") int bookid) {
+		
+		
 		System.out.println("get controller");
 		Book b = bookservice.getBookById(bookid);
+		System.out.println(b);
 		return b;
 
 	}
@@ -39,12 +43,11 @@ public class BookController {
 		bookservice.deleteBookById(bookid);
 
 	}
-	
+
 	@PutMapping("book/{id}")
-	public Book updateBook(@RequestBody Book book,@PathVariable("id") int bid)
-	{
-		Book b=bookservice.updateBook(book,bid);
+	public Book updateBook(@RequestBody Book book, @PathVariable("id") int bid) {
+		Book b = bookservice.updateBook(book, bid);
 		return b;
-		
+
 	}
 }

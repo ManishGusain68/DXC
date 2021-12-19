@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.rest.dao.BookRepository;
 import com.rest.entity.Book;
 
+
 @Service
 public class BookService {
 	@Autowired
@@ -28,6 +29,9 @@ public class BookService {
 
 	public Book updateBook(Book book, int bid) {
 		Book book1 = bookrepo.findById(bid).get();
+		
+		
+		
 		book1.setBookid(book.getBookid());
 		book1.setAuthor(book.getAuthor());
 		book1.setBookname(book.getBookname());
