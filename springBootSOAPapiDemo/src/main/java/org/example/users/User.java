@@ -5,7 +5,6 @@
 // Generated on: 2021.12.20 at 11:26:18 AM IST 
 //
 
-
 package org.example.users;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for user complex type.
+ * <p>
+ * Java class for user complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="user">
@@ -36,72 +37,65 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "user", propOrder = {
-    "name",
-    "empid",
-    "salary"
-})
+@XmlType(name = "user", propOrder = { "name", "empid", "salary" })
 public class User {
 
-    @XmlElement(required = true)
-    protected String name;
-    protected int empid;
-    protected double salary;
+	@XmlElement(required = true)
+	protected String name;
+	protected int empid;
+	protected double salary;
 
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getName() {
-        return name;
-    }
+	/**
+	 * Gets the value of the name property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getName() {
+		return name;
+	}
 
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setName(String value) {
-        this.name = value;
-    }
+	/**
+	 * Sets the value of the name property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setName(String value) {
+		this.name = value;
+	}
 
-    /**
-     * Gets the value of the empid property.
-     * 
-     */
-    public int getEmpid() {
-        return empid;
-    }
+	/**
+	 * Gets the value of the empid property.
+	 * 
+	 */
+	public int getEmpid() {
+		return empid;
+	}
 
-    /**
-     * Sets the value of the empid property.
-     * 
-     */
-    public void setEmpid(int value) {
-        this.empid = value;
-    }
+	/**
+	 * Sets the value of the empid property.
+	 * 
+	 */
+	public void setEmpid(int value) {
+		this.empid = value;
+	}
 
-    /**
-     * Gets the value of the salary property.
-     * 
-     */
-    public double getSalary() {
-        return salary;
-    }
+	/**
+	 * Gets the value of the salary property.
+	 * 
+	 */
+	public double getSalary() {
+		return salary;
+	}
 
-    /**
-     * Sets the value of the salary property.
-     * 
-     */
-    public void setSalary(double value) {
-        this.salary = value;
-    }
+	/**
+	 * Sets the value of the salary property.
+	 * 
+	 */
+	public void setSalary(double value) {
+		this.salary = value;
+	}
 
 }
